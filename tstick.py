@@ -8,7 +8,8 @@ import filetype
 home = getenv("HOME")
 
 parser = argparse.ArgumentParser(
-    description="Convert any picture to a telegram sticker on the fly."
+    description="Convert images to telegram stickers on the fly.",
+    usage="tstick.py [images]",
 )
 
 parser.add_argument(
