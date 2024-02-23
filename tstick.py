@@ -43,7 +43,7 @@ def check(file: str) -> bool:
 
 
 def convert(image: str, file_name: str) -> None:
-    extension = file_name.split(".")[1]
+    extension = file_name.split(".")[-1]
     output_file = file_name.removesuffix(extension)
     img = Image.open(image)
     img.thumbnail((512, 512))
