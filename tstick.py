@@ -42,12 +42,13 @@ def check(file: str) -> bool:
         return False
 
 
-def convert(file: str, file_name: str) -> None:
+def convert(image: str, file_name: str) -> None:
     extension = file_name.split(".")[1]
     output_file = file_name.removesuffix(extension)
-    img = Image.open(file)
+    img = Image.open(image)
     img.thumbnail((512, 512))
     img.save(f"{args.output}/{output_file}webp")
+    print(f"{file_name} has been converted")
 
 
 def main():
