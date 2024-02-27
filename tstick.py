@@ -1,10 +1,22 @@
 #!/usr/bin/env python
 
 from subprocess import call
-from PIL import Image
+
+try:
+    from PIL import Image
+except ModuleNotFoundError:
+    print("please install pillow then rerun the script.")
+    quit(1)
 import argparse
 from os import makedirs, path, getenv
-import filetype
+
+try:
+    import filetype
+except ModuleNotFoundError:
+    print(
+        "please intall the following module then rerun the script:\nhttps://pypi.org/project/filetype/"
+    )
+    quit(1)
 
 home = getenv("HOME")
 
